@@ -30,7 +30,7 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.4.5/bazel-0.4.5-ins
 sudo bash bazel-0.4.5-installer-linux-x86_64.sh
 
 # Python dependencies
-sudo yum install python27-devel -y
+sudo yum install python35-devel -y
 sudo pip install numpy wheel
 
 # Clone the repo
@@ -41,7 +41,7 @@ git checkout r${1}
 # Build TensorFlow. This takes about 26 minutes
 PYTHON_BIN_PATH=/usr/bin/python CC_OPT_FLAGS="-march=native" \
 TF_NEED_JEMALLOC=1 TF_NEED_GCP=0 TF_NEED_HDFS=0 TF_ENABLE_XLA=0 \
-TF_NEED_OPENCL=0 TF_NEED_CUDA=0 PYTHON_LIB_PATH="/usr/local/lib64/python2.7/site-packages" ./configure
+TF_NEED_OPENCL=0 TF_NEED_CUDA=0 PYTHON_LIB_PATH="/usr/local/lib64/python3.5/site-packages" ./configure
 JAVA_HOME=/usr/java/latest bazel build -c opt //tensorflow/tools/pip_package:build_pip_package
 
 # Install into a new directory
