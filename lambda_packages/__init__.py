@@ -147,5 +147,10 @@ lambda_packages = {
             'version': '1.0.9',
             'path': os.path.join(PACKAGES_DIR, 'xmlsec', 'python3.6-xmlsec-1.0.9.tar.gz')
         }
+    },
+    'tensorflow': {
+        'version': '1.3.0',
+        'path': os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             'tensorflow', 'tensorflow-1.3.tar.gz')
     }
 }
