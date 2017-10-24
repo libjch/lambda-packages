@@ -149,7 +149,7 @@ lambda_packages = {
         }
     },
     'tensorflow': {
-        'version': '1.3.0',
+        'version': '1.3.1',
         'path': os.path.join(os.path.dirname(os.path.abspath(__file__)),
                              'tensorflow', 'tensorflow-1.3.tar.gz')
     }
