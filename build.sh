@@ -26,8 +26,8 @@ sudo wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%
 sudo rpm -ivh jdk-8u51-linux-x64.rpm
 
 # Bazel
-wget https://github.com/bazelbuild/bazel/releases/download/0.4.5/bazel-0.4.5-installer-linux-x86_64.sh
-sudo bash bazel-0.4.5-installer-linux-x86_64.sh
+wget https://github.com/bazelbuild/bazel/releases/download/0.7.0/bazel-0.7.0-installer-linux-x86_64.sh
+sudo bash bazel-0.7.0-installer-linux-x86_64.sh
 
 # Python dependencies
 sudo yum install python35-devel -y
@@ -42,7 +42,7 @@ git checkout r${1}
 PYTHON_BIN_PATH=/usr/bin/python CC_OPT_FLAGS="-march=native" \
 TF_NEED_JEMALLOC=1 TF_NEED_GCP=0 TF_NEED_HDFS=0 TF_ENABLE_XLA=0 \
 TF_NEED_OPENCL=0 TF_NEED_CUDA=0 PYTHON_LIB_PATH="/usr/local/lib64/python3.5/site-packages" ./configure
-JAVA_HOME=/usr/java/latest bazel build -c opt //tensorflow/tools/pip_package:build_pip_package
+bazel build -c opt //tensorflow/tools/pip_package:build_pip_package
 
 # Install into a new directory
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg/
