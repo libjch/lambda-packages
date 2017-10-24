@@ -149,8 +149,8 @@ lambda_packages = {
         }
     },
     'tensorflow': {
-        'version': '1.4.0',
+        'version': '1.3.0',
         'path': os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             'tensorflow', 'tensorflow-1.4.tar.gz')
+                             'tensorflow', 'tensorflow-1.3.tar.gz')
     }
 }

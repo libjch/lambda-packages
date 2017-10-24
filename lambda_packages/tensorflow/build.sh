@@ -25,11 +25,11 @@ sudo wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%
 sudo rpm -ivh jdk-8u51-linux-x64.rpm
 
 # Bazel
-wget https://github.com/bazelbuild/bazel/releases/download/0.4.5/bazel-0.4.5-installer-linux-x86_64.sh
-sudo bash bazel-0.4.5-installer-linux-x86_64.sh
+wget https://github.com/bazelbuild/bazel/releases/download/0.7.0/bazel-0.7.0-installer-linux-x86_64.sh
+sudo bash bazel-0.7.0-installer-linux-x86_64.sh
 
 # Python dependencies
-sudo yum install python27-devel -y
+sudo yum install python36-devel -y
 sudo pip install numpy wheel
 
 # Clone the repo
